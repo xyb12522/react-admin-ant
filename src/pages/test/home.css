@@ -1,0 +1,11 @@
+div ul {
+  display: flex;
+  justify-content: flex-start;
+}
+div ul li {
+  list-style: none;
+  margin-right: 10px;
+}
+.selected {
+  color: rgb(10, 247, 156);
+}
