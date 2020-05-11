@@ -10,6 +10,7 @@ import {
 import '../style/home.css'
 
 const { Header, Footer, Sider, Content } = Layout;
+const logo = 'https://gw.alipayobjects.com/zos/antfincdn/PmY%24TNNDBI/logo.svg';
 export default class Home extends React.Component {
   state = {
     collapsed: false,
@@ -22,11 +23,16 @@ export default class Home extends React.Component {
   };
   render() {
     return (
-      <div id={'components-layout-demo-custom-trigger'}>
+      <div id={'components-layout'}>
         <Layout>
-          <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-            <div className="logo" />
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Sider trigger={null} collapsible collapsed={this.state.collapsed} className={'ant-pro-sider-menu-sider'} width={256}>
+            <div className="ant-pro-sider-menu-logo">
+              <a href="/">
+                <img src={logo} alt="logo" />
+                {this.state.collapsed ? null : <h1>React Admin</h1>}
+              </a>
+            </div>
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} style={{ padding: '16px 0', width: '100%' }}>
               <Menu.Item key="1" icon={<UserOutlined />}>
                 nav 1
               </Menu.Item>
