@@ -1,0 +1,87 @@
+.rant-header-trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+/*--logo部分--开始--*/
+.ant-pro-sider-menu-logo {
+  position: relative;
+  padding: 0 24px;
+  overflow: hidden;
+  background: #001529;
+  cursor: pointer;
+  transition: all .3s;
+  &>a {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+  & img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+  & h1 {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: middle;
+    animation: fade-in;
+    animation-duration: .3s;
+  }
+}
+@keyframes fade-in {
+  0% {
+      opacity: 0
+  }
+
+  40% {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+/*--logo部分--结束--*/
+
+/* 侧边栏---Start--- */
+.ant-pro-sider-menu-sider {
+  position: relative;
+  z-index: 10;
+  min-height: 100%;
+  box-shadow: 2px 0 6px rgba(0,21,41,.35);
+}
+.ant-pro-sider-menu-sider.fix-sider-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 2px 0 8px 0 rgba(29,35,41,.05);
+}
+.item-menu {
+  color: #fff;
+}
+/* 侧边栏---END-- */
+
+/* 右侧布局 */
+/* .site-layout {
+  height: 100vh;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  width: calc(100% - 256px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+} */
+.site-layout .site-layout-background {
+  background: #fff;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
-export default class Pc extends React.Component {
+class Login extends React.Component {
   render() {
     return (
       <div>
-        加入电脑pc模式
+        Login
       </div>
     )
   }
 }
+export default Login;
