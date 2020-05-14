@@ -1,5 +1,10 @@
 export default [
   {
+    title: "首页",
+    path: "/home",
+    icon: "HomeOutlined",
+  },
+  {
     title: "Dashboard",
     path: "/dashboard",
     icon: "DashboardOutlined",
@@ -44,6 +49,31 @@ export default [
     ]
   },
   {
+    title: "设置页",
+    path: "/set",
+    icon: "SettingOutlined",
+    children: [
+      {
+        title: "用户管理",
+        path: "/set/users",
+        icon: "",
+        roles:["admin"]
+      },
+      {
+        title: "角色管理",
+        path: "/set/roles",
+        icon: "",
+        roles:["guest"]
+      },
+      {
+        title: "菜单管理",
+        path: "/set/menus",
+        icon: "",
+        roles:["admin"]
+      }
+    ]
+  },
+  {
     title: "表单页",
     path: "/form",
     icon: "FormOutlined",
@@ -64,7 +94,15 @@ export default [
         title: "高级表单",
         path: "/form/advanced-form",
         icon: "",
-        roles:["admin"]
+        roles:["admin"],
+        children: [
+          {
+            title: "分步表单22",
+            path: "/form/advanced-form/step-form",
+            icon: "",
+            roles:["guest"]
+          }
+        ]
       }
     ]
   },
@@ -72,6 +110,7 @@ export default [
     title: "列表页",
     path: "/list",
     icon: "TableOutlined",
+    children: []
   },
   {
     title: "详情页",

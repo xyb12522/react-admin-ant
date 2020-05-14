@@ -1,4 +1,9 @@
 import React from 'react';
+// 这是整体引入
+// import * as allIcons from '@ant-design/icons/es/icons';
+// import AntdIcon, {createFromIconfontCN, getTwoToneColor, setTwoToneColor} from '@ant-design/icons';
+
+// 这里还是采用按需引入
 import {
   DashboardOutlined,
   FormOutlined,
@@ -13,6 +18,8 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   MehOutlined,
+  SettingOutlined,
+  HomeOutlined,
 } from '@ant-design/icons';
 export default class Icon extends React.Component {
   outIconByType() {
@@ -53,6 +60,12 @@ export default class Icon extends React.Component {
         break;
       case 'MenuFoldOutlined':
         ico = <MenuFoldOutlined {...this.props} />;
+        break;
+      case 'SettingOutlined':
+        ico = <SettingOutlined />;
+        break;
+      case 'HomeOutlined':
+        ico = <HomeOutlined />;
         break;
       default:
         ico = <MehOutlined />;

@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Layout from '@/pages/layout/Layout';
+import Layout from '@/layouts/Layout';
 import Login from "@/pages/login/Login";
 
 var token = true;
@@ -26,10 +26,10 @@ class Routes extends React.Component {
   }
   render() {
     return (
-      <Suspense fallback={<div></div>}>
       <Router>
         <Switch>
             <Route exact path="/login" component={Login} />
+            <Route exact path="/404" component={()=><div>---notfound--404---!</div>} />
             <Route
               path="/"
               render={() => {
@@ -49,14 +49,9 @@ class Routes extends React.Component {
                 }
               }}
             />
-            {/* <Route exact path="/" render={() => <Redirect to="/home" push />} />
-            <Route path="/" component={Layout} />
-            <Route path="/404" component={()=><div>---404---!</div>} />
-            <Route path="/login" component={()=><div>---longin---!</div>} /> */}
-            <Route component={()=><div>---notfound--404---!</div>} />
+            {/* <Route component={()=><div>---notfound--404---!</div>} /> */}
         </Switch>
       </Router>
-      </Suspense>
     )
   }
 }
