@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import Menu from './SiderMenu/SiderMenu';
 import TopHeader from './TopHeader/TopHeader';
 import Contents from './Content/Content';
+import GlobalFooter from './GlobalFooter/GlobalFooter';
 
 import logo from '@/logo.png';
 import Icon from '@/components/icons/Icon';
@@ -45,12 +46,15 @@ class Layouti extends React.Component {
             style={{
               margin: '24px 16px',
               padding: 24,
-              minHeight: 280,
+              position: 'relative',
+              transition: 'all .2s'
             }}>
             <Contents />
           </Content>
           {/* 底部 */}
-          <Footer>Footer</Footer>
+          <Footer>
+            <GlobalFooter />
+          </Footer>
         </Layout>
       </Layout>
     )

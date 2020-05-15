@@ -2,6 +2,8 @@ import React from 'react'
 
 const Home = React.lazy(()=>import(/*webpackchunkname:Home*/'@/pages/Home' ))
 const Dashboard = React.lazy(()=>import(/*webpackchunkname:Home*/'@/pages/Dashboard' ))
+const BasicForm = React.lazy(()=>import(/*webpackchunkname:Home*/'@/pages/form/basic-form'))
+
 const Not404 = React.lazy(()=>import(/*webpackchunkname:Home*/'@/pages/error/404' ))
 
 export default [
@@ -19,6 +21,11 @@ export default [
       path: '/dashboard/analysis',
       exact: true,
       component: Dashboard
+    },
+    {
+      path: '/form/basic-form',
+      exact: true,
+      component: BasicForm
     },
     {
       path: '/error/404',
